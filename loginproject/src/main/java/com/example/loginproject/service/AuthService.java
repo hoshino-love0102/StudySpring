@@ -2,7 +2,7 @@ package com.example.loginproject.service;
 
 import com.example.loginproject.model.User;
 import com.example.loginproject.repository.UserRepository;
-import com.example.loginproject.util.SHA256Util;
+import com.example.loginproject.Util.SHA256Util;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
