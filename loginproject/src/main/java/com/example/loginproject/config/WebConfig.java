@@ -13,7 +13,7 @@ public class WebConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/api/**")
-                        .allowedOrigins("https://19d1-221-168-22-205.ngrok-free.app")
+                        .allowedOrigins("https://654e-221-168-22-205.ngrok-free.app")
                         .allowedMethods("GET", "POST");
             }
         };

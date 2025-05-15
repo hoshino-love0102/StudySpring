@@ -2,7 +2,7 @@ package com.example.loginproject.service;
 
 import com.example.loginproject.model.User;
 import com.example.loginproject.repository.UserRepository;
-import com.example.loginproject.Util.SHA256Util;
+import com.example.loginproject.util.SHA256Util;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -16,7 +16,7 @@ public class AuthService {
             throw new IllegalArgumentException("이미 존재하는 아이디입니다.");
         }
 
-        String encryptedPassword = SHA256Util.encode(password);
+        String encryptedPassword = com.example.loginproject.util.SHA256Util.encode(password);
         User user = new User(username, encryptedPassword);
         userRepository.save(user);
     }
@@ -25,7 +25,7 @@ public class AuthService {
         User user = userRepository.findByUsername(username);
         if (user == null) return false;
 
-        String encryptedPassword = SHA256Util.encode(password);
+        String encryptedPassword = com.example.loginproject.util.SHA256Util.encode(password);
         return user.getPassword().equals(encryptedPassword);
     }
 }

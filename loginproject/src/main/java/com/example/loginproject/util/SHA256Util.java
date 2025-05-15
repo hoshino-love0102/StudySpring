@@ -1,4 +1,4 @@
-package com.example.loginproject.Util;
+package com.example.loginproject.util;
 
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
