@@ -10,7 +10,7 @@ async function saveNote() {
     const result = await response.json();
 
     // 알림창 + 화면에 노트 ID 표시
-    alert(`노트 저장 완료! ID: ${result.id}`);
+    alert(`노트 저장 완료 ID: ${result.id}`);
     document.getElementById("saveResult").innerText = `노트 ID: ${result.id}`;
 }
 
