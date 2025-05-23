@@ -37,8 +37,8 @@ async function deleteNote() {
     });
 
     if (response.ok) {
-        alert("노트 삭제 완료!");
+        alert("노트 삭제 완료");
     } else {
-        alert("삭제 실패!");
+        alert("삭제 실패");
     }
 }
