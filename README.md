@@ -10,12 +10,12 @@ SpringBoot 스터디 기록 저장소입니다.
 ## 사용 기술
 - Java 17
 - Spring Boot
-- HTML/CSS/JavaScript
 - Gradle
 
 ## 업데이트 로그
-- 로그인 기능 기본 구조 구성
-- 노트 저장, 삭제 기능 개발
-- 비밀번호 암호화 기능 구현
-- LocalDateTime기반 날짜 저장 구현
+- 로그인 기능 기본 구조 구성  
+- 노트 저장, 삭제 기능 개발  
+- 비밀번호 암호화 기능 구현  
+- LocalDateTime 기반 날짜 저장 구현  
+- Filter를 활용한 요청 처리 흐름 이해 및 적용  
 - 계속 업데이트 예정
