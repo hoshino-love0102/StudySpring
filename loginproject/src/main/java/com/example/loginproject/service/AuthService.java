@@ -16,16 +16,13 @@ public class AuthService {
             throw new IllegalArgumentException("이미 존재하는 아이디입니다.");
         }
 
-        String encryptedPassword = com.example.loginproject.util.SHA256Util.encode(password);
-        User user = new User(username, encryptedPassword);
-        userRepository.save(user);
+        String hashed = SHA256Util.encode(password);
+        userRepository.save(new User(username, hashed));
     }
 
     public boolean authenticate(String username, String password) {
         User user = userRepository.findByUsername(username);
         if (user == null) return false;
-
-        String encryptedPassword = com.example.loginproject.util.SHA256Util.encode(password);
-        return user.getPassword().equals(encryptedPassword);
+        return user.getPassword().equals(SHA256Util.encode(password));
     }
 }
