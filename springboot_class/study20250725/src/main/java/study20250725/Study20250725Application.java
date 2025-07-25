@@ -11,3 +11,5 @@ public class Study20250725Application {
     }
 
 }
+
+//오늘 수업은 application.properties db연결하는거끝
