@@ -1,0 +1,14 @@
+<h1>회원 수정</h1>
+
+<form action="/member/{{member.id}}/edit" method="post">
+    <label>이름:</label>
+    <input type="text" name="name" value="{{member.name}}" required><br><br>
+
+    <label>이메일:</label>
+    <input type="email" name="email" value="{{member.email}}" required><br><br>
+
+    <button type="submit">수정 완료</button>
+</form>
+
+<br>
+<a href="/member/{{member.id}}">← 돌아가기</a>
