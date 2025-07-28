@@ -40,4 +40,14 @@ public class MemberService {
         return memberRepository.count();
     }
 
+    public void update(Long id, MemberDto dto) {
+        Member member = memberRepository.findById(id).orElseThrow();
+        member.setName(dto.getName());
+        member.setEmail(dto.getEmail());
+        memberRepository.save(member);
+    }
+
+    public void delete(Long id) {
+        memberRepository.deleteById(id);
+    }
 }
