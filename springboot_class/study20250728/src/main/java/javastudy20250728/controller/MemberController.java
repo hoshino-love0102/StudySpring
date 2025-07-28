@@ -45,4 +45,23 @@ public class MemberController {
         memberService.save(memberDto);
         return "redirect:/members";
     }
+
+    @GetMapping("/member/{id}/edit")
+    public String editMemberForm(@PathVariable Long id, Model model) {
+        MemberDto member = memberService.findById(id);
+        model.addAttribute("member", member);
+        return "memberedit";
+    }
+
+    @PostMapping("/member/{id}/edit")
+    public String updateMember(@PathVariable Long id, @ModelAttribute MemberDto dto) {
+        memberService.update(id, dto);
+        return "redirect:/member/" + id;
+    }
+
+    @PostMapping("/member/{id}/delete")
+    public String deleteMember(@PathVariable Long id) {
+        memberService.delete(id);
+        return "redirect:/members";
+    }
 }
